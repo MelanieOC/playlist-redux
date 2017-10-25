@@ -1,3 +1,4 @@
+import createStore from 'redux-zero';
 const songs = [
     {
         title:"Here Comes the Sun",
@@ -19,4 +20,11 @@ const songs = [
     }
 ]
 
-export default songs;
+const initialState = {
+    playlist: songs,
+    nowPlayingIndex: 0
+};
+
+const store = createStore(initialState);
+
+export default store;
